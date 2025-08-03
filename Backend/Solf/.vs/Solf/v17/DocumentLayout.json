@@ -1,0 +1,283 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7F237EEB-E080-4E77-8B11-88A25C5D8B4B}|Solf\\API.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\solf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F237EEB-E080-4E77-8B11-88A25C5D8B4B}|Solf\\API.csproj|solutionrelative:solf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\database.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\database.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0958A33A-3A1E-4D87-963D-E08D0A353A84}|Services\\Services.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0958A33A-3A1E-4D87-963D-E08D0A353A84}|Services\\Services.csproj|solutionrelative:services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0958A33A-3A1E-4D87-963D-E08D0A353A84}|Services\\Services.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\services\\services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0958A33A-3A1E-4D87-963D-E08D0A353A84}|Services\\Services.csproj|solutionrelative:services\\services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\models\\balance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\models\\balance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\models\\resourceshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\models\\resourceshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\models\\documentreceipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\models\\documentreceipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\models\\documentshipping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\models\\documentshipping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\models\\resourcereceipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\models\\resourcereceipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\models\\ue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\models\\ue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\enums\\documentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\enums\\documentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|c:\\users\\serge\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\solf\\backend\\solf\\database\\enums\\entitystatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5B628D-685A-4223-A2FD-E03D871C4FAE}|Database\\Database.csproj|solutionrelative:database\\enums\\entitystatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Database",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Database.csproj",
+              "RelativeDocumentMoniker": "Database\\Database.csproj",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Database.csproj",
+              "RelativeToolTip": "Database\\Database.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-03T16:08:10.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Services",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Services\\Services.csproj",
+              "RelativeDocumentMoniker": "Services\\Services.csproj",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Services\\Services.csproj",
+              "RelativeToolTip": "Services\\Services.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-03T16:03:21.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Solf\\Program.cs",
+              "RelativeDocumentMoniker": "Solf\\Program.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Solf\\Program.cs",
+              "RelativeToolTip": "Solf\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T16:03:23.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "Database\\DatabaseContext.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\DatabaseContext.cs",
+              "RelativeToolTip": "Database\\DatabaseContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T16:01:49.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UE.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\UE.cs",
+              "RelativeDocumentMoniker": "Database\\Models\\UE.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\UE.cs",
+              "RelativeToolTip": "Database\\Models\\UE.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T15:59:34.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResourceShipment.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\ResourceShipment.cs",
+              "RelativeDocumentMoniker": "Database\\Models\\ResourceShipment.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\ResourceShipment.cs",
+              "RelativeToolTip": "Database\\Models\\ResourceShipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T15:59:32.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ResourceReceipt.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\ResourceReceipt.cs",
+              "RelativeDocumentMoniker": "Database\\Models\\ResourceReceipt.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\ResourceReceipt.cs",
+              "RelativeToolTip": "Database\\Models\\ResourceReceipt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T15:59:27.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Resource.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\Resource.cs",
+              "RelativeDocumentMoniker": "Database\\Models\\Resource.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\Resource.cs",
+              "RelativeToolTip": "Database\\Models\\Resource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T15:59:24.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Services\\Class1.cs",
+              "RelativeDocumentMoniker": "Services\\Class1.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Services\\Class1.cs",
+              "RelativeToolTip": "Services\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T15:55:54.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "Database\\Models\\Client.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\Client.cs",
+              "RelativeToolTip": "Database\\Models\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T15:58:26.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DocumentStatus.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Enums\\DocumentStatus.cs",
+              "RelativeDocumentMoniker": "Database\\Enums\\DocumentStatus.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Enums\\DocumentStatus.cs",
+              "RelativeToolTip": "Database\\Enums\\DocumentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T16:00:26.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EntityStatus.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Enums\\EntityStatus.cs",
+              "RelativeDocumentMoniker": "Database\\Enums\\EntityStatus.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Enums\\EntityStatus.cs",
+              "RelativeToolTip": "Database\\Enums\\EntityStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T16:00:34.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DocumentShipping.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\DocumentShipping.cs",
+              "RelativeDocumentMoniker": "Database\\Models\\DocumentShipping.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\DocumentShipping.cs",
+              "RelativeToolTip": "Database\\Models\\DocumentShipping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T15:59:15.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Balance.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\Balance.cs",
+              "RelativeDocumentMoniker": "Database\\Models\\Balance.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\Balance.cs",
+              "RelativeToolTip": "Database\\Models\\Balance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T15:58:44.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DocumentReceipt.cs",
+              "DocumentMoniker": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\DocumentReceipt.cs",
+              "RelativeDocumentMoniker": "Database\\Models\\DocumentReceipt.cs",
+              "ToolTip": "C:\\Users\\serge\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Solf\\Backend\\Solf\\Database\\Models\\DocumentReceipt.cs",
+              "RelativeToolTip": "Database\\Models\\DocumentReceipt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T15:58:58.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

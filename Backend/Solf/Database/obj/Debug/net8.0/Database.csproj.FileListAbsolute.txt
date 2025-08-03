@@ -1,0 +1,14 @@
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\bin\Debug\net8.0\Database.deps.json
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\bin\Debug\net8.0\Database.runtimeconfig.json
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\bin\Debug\net8.0\Database.dll
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\bin\Debug\net8.0\Database.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.csproj.AssemblyReference.cache
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.AssemblyInfoInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.AssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.csproj.CoreCompileInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.dll
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\refint\Database.dll
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.genruntimeconfig.cache
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\ref\Database.dll
