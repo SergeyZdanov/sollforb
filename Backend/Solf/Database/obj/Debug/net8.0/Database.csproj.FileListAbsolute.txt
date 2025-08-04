@@ -7,6 +7,7 @@ C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\D
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.AssemblyInfoInputs.cache
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.AssemblyInfo.cs
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.csproj.CoreCompileInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.sourcelink.json
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\refint\Database.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Database\obj\Debug\net8.0\Database.pdb

@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "API.Controllers.ClientController",
+    "Method": "GetAllClientAsync",
+    "RelativePath": "api/Client",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.DiagnosticsController",
+    "Method": "Check",
+    "RelativePath": "api/Diagnostics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
