@@ -1,21 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Database.Models;
+﻿using Database.Models;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Database
 {
-    internal class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
+            //Database.EnsureCreated();
         }
         public DbSet<Resource> Resources { get; set; }
-        public DbSet<UE> Units { get; set; }
+        public DbSet<UE> Ue { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Balance> Balances { get; set; }
         public DbSet<DocumentReceipt> ReceiptDocuments { get; set; }

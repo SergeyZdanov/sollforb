@@ -15,7 +15,7 @@ namespace Database.Models
         [Required]
         public int Number { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.UtcNow;
 
         public ICollection<ResourceReceipt> ResourceReceipts { get; set; }
     }
