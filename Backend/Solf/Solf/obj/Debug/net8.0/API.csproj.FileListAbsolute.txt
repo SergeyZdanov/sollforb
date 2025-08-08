@@ -6,6 +6,7 @@ C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\API.runtimeconfig.json
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\API.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\API.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Humanizer.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.Build.Locator.dll
@@ -29,10 +30,15 @@ C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Npgsql.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -136,9 +142,3 @@ C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\obj\Debug
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\obj\Debug\net8.0\API.pdb
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\obj\Debug\net8.0\ref\API.dll
-C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\AutoMapper.dll
-C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\serge\OneDrive\Рабочий стол\Solf\Backend\Solf\Solf\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll

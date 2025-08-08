@@ -1,14 +1,16 @@
 ﻿using Database.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Database.Interfaces
 {
-    public interface IDocumentReceiptRepository :  IRepository<DocumentReceipt>
+    public interface IDocumentReceiptRepository : IRepository<DocumentReceipt>
     {
-        Task<bool> NumberExistsAsync(int number);
+        public Task<DocumentReceipt> GetByNumberAsync(int id);
+        public Task<bool> ExistsByNameAsync(int number, int? id = null);
+        public Task<IEnumerable<DocumentReceipt>> GetFilteredAsync(
+           DateTime? startDate,
+           DateTime? endDate,
+           IEnumerable<int>? documentNumbers,
+           IEnumerable<int>? resourceIds,
+           IEnumerable<int>? UeIds);
     }
 }
