@@ -1,0 +1,12 @@
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+[Bb]in/
+[Oo]bj/
+*.[Cc]ache
+*.[Ll]og
+*.[Tt]mp
+.DS_Store
+Thumbs.db
