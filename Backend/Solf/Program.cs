@@ -1,3 +1,4 @@
+using API.Mappers;
 using Database;
 using Database.Interfaces;
 using Database.Repositoryes;
@@ -22,22 +23,33 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IClientService, ClientService>();
 
+builder.Services.AddScoped<IResourceRepository, ResourceRepository>();
+builder.Services.AddScoped<IResourceService, ResourceService>();
 
+builder.Services.AddScoped<IUeRepository, UeRepository>();
+builder.Services.AddScoped<IUeService, UeService>();
+
+
+builder.Services.AddAutoMapper(x => x.AddProfile(typeof(ClientMapper)));
+builder.Services.AddAutoMapper(x => x.AddProfile(typeof(ResourceMapper)));
+builder.Services.AddAutoMapper(x => x.AddProfile(typeof(UeMapper)));
 
 builder.Services.AddDbContext<DatabaseContext>(options =>
 {
-    /*options.UseNpgsql("Host=localhost;Port=5432;Database=Solf;Username=postgres;Password=111;");*/
+    /* options.UseNpgsql("Host=localhost;Port=5432;Database=Solf;Username=postgres;Password=111;");*/
     options.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword;");
 });
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    });
 }
-
-
 
 app.MapControllers();
 

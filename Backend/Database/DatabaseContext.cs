@@ -8,7 +8,7 @@ namespace Database
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
         public DbSet<Resource> Resources { get; set; }
         public DbSet<UE> Ue { get; set; }
