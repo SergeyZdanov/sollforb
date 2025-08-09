@@ -1,14 +1,32 @@
 ﻿using Database.Interfaces;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace Database.Repositoryes
 {
-    internal class DocumentReceiptRepository : BaseRepository<DocumentReceipt>, IDocumentReceiptRepository
+    public class DocumentReceiptRepository : BaseRepository<DocumentReceipt>, IDocumentReceiptRepository
     {
         public DocumentReceiptRepository(DatabaseContext databaseContext) : base(databaseContext)
         {
         }
+
+        public async Task<DocumentReceipt> GetByIdAsync(int id, bool includeResources = false)
+        {
+            var query = Context.ReceiptDocuments.AsQueryable();
+
+            if (includeResources) 
+            {
+                query.Include(d => d.ResourceReceipts)
+                    .ThenInclude(e => e.Resource)
+                    .Include(x => x.ResourceReceipts)
+                    .ThenInclude(r => r.Ue);
+            }
+
+            return await query.FirstOrDefaultAsync(d => d.Id == id);
+        }
+                
+
 
         public async override Task DeleteAsync(int id)
         {

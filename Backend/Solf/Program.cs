@@ -29,10 +29,16 @@ builder.Services.AddScoped<IResourceService, ResourceService>();
 builder.Services.AddScoped<IUeRepository, UeRepository>();
 builder.Services.AddScoped<IUeService, UeService>();
 
+builder.Services.AddScoped<IDocumentReceiptRepository, DocumentReceiptRepository>();
+builder.Services.AddScoped<IDocumentReceiptService, DocumentReceiptService>();
+
+builder.Services.AddScoped<IBalanceService, BalanceService>();
+builder.Services.AddScoped<IBalanceRepository, BalanceRepository>();
 
 builder.Services.AddAutoMapper(x => x.AddProfile(typeof(ClientMapper)));
 builder.Services.AddAutoMapper(x => x.AddProfile(typeof(ResourceMapper)));
 builder.Services.AddAutoMapper(x => x.AddProfile(typeof(UeMapper)));
+builder.Services.AddAutoMapper(x => x.AddProfile(typeof(DocumentReceiptMapper)));
 
 builder.Services.AddDbContext<DatabaseContext>(options =>
 {

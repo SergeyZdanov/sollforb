@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Database.Interfaces
 {
-    public interface IBalanceRepository
+    public interface IBalanceRepository : IRepository<Balance>
     {
-        public Task<Balance> Get(int[]? resourceId, int[] ue_Id);
+        Task<Balance> GetByResourceAndUnitAsync(int resourceId, int ue_id);
     }
 }
