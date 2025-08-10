@@ -21,19 +21,16 @@ namespace Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Уникальные индексы
             modelBuilder.Entity<Resource>().HasIndex(r => r.Name).IsUnique();
             modelBuilder.Entity<UE>().HasIndex(u => u.Name).IsUnique();
             modelBuilder.Entity<Client>().HasIndex(c => c.Name).IsUnique();
             modelBuilder.Entity<DocumentReceipt>().HasIndex(d => d.Number).IsUnique();
             modelBuilder.Entity<DocumentShipping>().HasIndex(d => d.Number).IsUnique();
 
-            // Уникальный составной индекс для Balance
             modelBuilder.Entity<Balance>()
                 .HasIndex(b => new { b.ResourceId, b.UE_Id })
                 .IsUnique();
 
-            // Ограничения для Quantity
             modelBuilder.Entity<Balance>()
                 .Property(b => b.Quantity)
                 .HasPrecision(18, 3);
@@ -46,7 +43,6 @@ namespace Database
                 .Property(s => s.Quantity)
                 .HasPrecision(18, 3);
 
-            // Каскадное удаление для дочерних сущностей
             modelBuilder.Entity<ResourceReceipt>()
                 .HasOne(r => r.DocumentReceipt)
                 .WithMany(d => d.ResourceReceipts)
@@ -57,7 +53,6 @@ namespace Database
                 .WithMany(d => d.ResourceShipments)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Ограничение на удаление связанных сущностей
             modelBuilder.Entity<Balance>()
                 .HasOne(b => b.Resource)
                 .WithMany()

@@ -9,7 +9,7 @@ using Database.Enums;
 
 namespace Database.Models
 {
-    public class DocumentShipping //документ отгрузки
+    public class DocumentShipping
     {
         [Key]
         public int Id { get; set; }

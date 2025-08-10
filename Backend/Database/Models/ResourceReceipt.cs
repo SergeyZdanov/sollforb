@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Database.Models
 {
-    public class ResourceReceipt // ресурс поступления
+    public class ResourceReceipt
     {
         [Key]
         public int Id { get; set; }

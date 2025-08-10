@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Database.Models
 {
-    public class DocumentReceipt // Документ поступления
+    public class DocumentReceipt
     {
         [Key]
         public int Id { get; set; }

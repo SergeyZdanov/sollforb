@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Database.Models
 {
-    public class ResourceShipment // ресурс отгрузки
+    public class ResourceShipment
     {
         [Key]
         public int Id { get; set; }

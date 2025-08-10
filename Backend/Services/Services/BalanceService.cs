@@ -2,11 +2,6 @@
 using Database.Models;
 using Services.Interfaces;
 using Services.Services.Dto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Services.Services
 {
@@ -14,11 +9,16 @@ namespace Services.Services
     {
         private readonly IBalanceRepository _balanceRepository;
         private readonly IDocumentReceiptRepository _receiptRepository;
+        private readonly IDocumentShippingRepository _shippingRepository;
 
-        public BalanceService(IBalanceRepository balanceRepository, IDocumentReceiptRepository receiptRepository)
+        public BalanceService(
+            IBalanceRepository balanceRepository,
+            IDocumentReceiptRepository receiptRepository,
+            IDocumentShippingRepository shippingRepository)
         {
             _balanceRepository = balanceRepository;
             _receiptRepository = receiptRepository;
+            _shippingRepository = shippingRepository;
         }
 
         public async Task UpdateBalanceFromReceiptAsync(int receiptDocumentId)
@@ -51,6 +51,38 @@ namespace Services.Services
             }
         }
 
+        
+        public async Task UpdateBalanceFromShippingAsync(int shippingDocumentId)
+        {
+            var document = await _shippingRepository.GetByIdAsync(shippingDocumentId, includeResources: true)
+                ?? throw new KeyNotFoundException("Shipping document not found");
+
+            foreach (var resource in document.ResourceShipments)
+            {
+                await AdjustBalanceAsync(
+                    resource.ResourceId,
+                    resource.UE_Id,
+                    (int)resource.Quantity,
+                    isIncrease: false);
+            }
+        }
+
+        
+        public async Task RevertBalanceFromShippingAsync(int shippingDocumentId)
+        {
+            var document = await _shippingRepository.GetByIdAsync(shippingDocumentId, includeResources: true)
+                ?? throw new KeyNotFoundException("Shipping document not found");
+
+            foreach (var resource in document.ResourceShipments)
+            {
+                await AdjustBalanceAsync(
+                    resource.ResourceId,
+                    resource.UE_Id,
+                    (int)resource.Quantity,
+                    isIncrease: true);
+            }
+        }
+
         public async Task<bool> HasSufficientQuantity(int resourceId, int unitId, decimal requiredQuantity)
         {
             var balance = await _balanceRepository.GetByResourceAndUnitAsync(resourceId, unitId);
@@ -69,7 +101,6 @@ namespace Services.Services
                 Quantity = b.Quantity
             });
         }
-
 
         private async Task AdjustBalanceAsync(int resourceId, int unitId, int quantity, bool isIncrease)
         {
@@ -98,6 +129,5 @@ namespace Services.Services
                 await _balanceRepository.UpdateAsync(balance);
             }
         }
-
     }
 }
