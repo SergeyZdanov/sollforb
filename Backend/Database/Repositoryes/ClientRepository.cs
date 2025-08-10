@@ -1,6 +1,6 @@
 ﻿using Database.Interfaces;
 using Database.Models;
-using Microsoft.EntityFrameworkCore; // Понадобится для AnyAsync
+using Microsoft.EntityFrameworkCore;
 
 namespace Database.Repositoryes
 {

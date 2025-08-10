@@ -91,7 +91,6 @@ namespace Services.Services
 
         public async Task<List<DocumentReceipt>> GetAllAsync(bool isActive)
         {
-            // TODO: Реализовать фильтрацию по isActive (возможно)
             return await _documentReceiptRepository.GetAllAsync();
         }
 

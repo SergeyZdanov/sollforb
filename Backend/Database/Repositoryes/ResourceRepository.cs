@@ -31,8 +31,8 @@ namespace Database.Repositoryes
         public async Task<bool> HasDependenciesAsync(int resourceId)
         {
             bool hasBalance = await Context.Balances.AnyAsync(b => b.ResourceId == resourceId);
-            bool hasReceipts = await Context.Balances.AnyAsync(b => b.ResourceId == resourceId);
-            bool hasShipments = await Context.Balances.AnyAsync(b => b.ResourceId == resourceId);
+            bool hasReceipts = await Context.ReceiptResources.AnyAsync(r => r.ResourceId == resourceId);
+            bool hasShipments = await Context.ShipmentResources.AnyAsync(s => s.ResourceId == resourceId);
 
             return hasBalance || hasReceipts || hasShipments;
         }
