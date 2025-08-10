@@ -3,7 +3,6 @@ using AutoMapper;
 using Database.Models;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
-using Services.Services;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace API.Controllers
@@ -25,55 +24,41 @@ namespace API.Controllers
         [SwaggerOperation("Создание документа на поступление")]
         public async Task<IActionResult> CreateClientAsync([FromBody] DocumentReceiptCreateDto documentReceiptCreateDto)
         {
-            var result = await _documentReceiptService.CreateAsync(_mapper.Map<DocumentReceipt>(documentReceiptCreateDto));
-            return Ok(result);
+            var documentEntity = await _documentReceiptService.CreateAsync(_mapper.Map<DocumentReceipt>(documentReceiptCreateDto));
+            var result = await _documentReceiptService.GetByIdAsync(documentEntity.Id);
+            return Ok(_mapper.Map<DocumentReceiptDto>(result));
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetDocumentById(int id)
         {
-                var document = await _documentReceiptService.GetByIdAsync(id);
-                return Ok(document);
+            var document = await _documentReceiptService.GetByIdAsync(id);
+            if (document == null)
+                return NotFound();
+
+            return Ok(_mapper.Map<DocumentReceiptDto>(document));
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateDocument(int id, [FromBody] DocumentReceiptCreateDto dto)
         {
-            try
-            {
-                await _documentReceiptService.UpdateAsync(id, _mapper.Map<DocumentReceipt>(dto));
-                return NoContent();
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _documentReceiptService.UpdateAsync(id, _mapper.Map<DocumentReceipt>(dto));
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDocument(int id)
         {
-            try
-            {
-                await _documentReceiptService.DeleteAsync(id);
-                return NoContent();
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
+            await _documentReceiptService.DeleteAsync(id);
+            return NoContent();
         }
 
         [HttpGet]
         public async Task<IActionResult> GetFilteredDocuments([FromQuery] DocumentReceiptFilterDto filter)
         {
             var documents = await _documentReceiptService.GetFilteredAsync(filter.StartDate, filter.EndDate, filter.DocumentNumbers, filter.ResourceIds, filter.Ue);
-            return Ok(documents);
+            var resultDto = _mapper.Map<IEnumerable<DocumentReceiptDto>>(documents);
+            return Ok(resultDto);
         }
     }
 }
-

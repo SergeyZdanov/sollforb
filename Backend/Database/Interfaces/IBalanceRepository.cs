@@ -10,5 +10,6 @@ namespace Database.Interfaces
     public interface IBalanceRepository : IRepository<Balance>
     {
         Task<Balance> GetByResourceAndUnitAsync(int resourceId, int ue_id);
+        Task<IEnumerable<Balance>> GetFilteredAsync(IEnumerable<int> resourceIds, IEnumerable<int> ueIds);
     }
 }

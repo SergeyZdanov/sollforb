@@ -2,6 +2,11 @@
 using Database.Models;
 using Services.Interfaces;
 using Services.Services.Dto;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Services.Services
 {
@@ -51,7 +56,6 @@ namespace Services.Services
             }
         }
 
-        
         public async Task UpdateBalanceFromShippingAsync(int shippingDocumentId)
         {
             var document = await _shippingRepository.GetByIdAsync(shippingDocumentId, includeResources: true)
@@ -67,7 +71,6 @@ namespace Services.Services
             }
         }
 
-        
         public async Task RevertBalanceFromShippingAsync(int shippingDocumentId)
         {
             var document = await _shippingRepository.GetByIdAsync(shippingDocumentId, includeResources: true)
@@ -89,9 +92,9 @@ namespace Services.Services
             return balance?.Quantity >= requiredQuantity;
         }
 
-        public async Task<IEnumerable<BalanceDto>> GetCurrentBalanceAsync()
+        public async Task<IEnumerable<BalanceDto>> GetCurrentBalanceAsync(IEnumerable<int> resourceIds, IEnumerable<int> ueIds)
         {
-            var balances = await _balanceRepository.GetAllAsync();
+            var balances = await _balanceRepository.GetFilteredAsync(resourceIds, ueIds);
             return balances.Select(b => new BalanceDto
             {
                 ResourceId = b.ResourceId,
@@ -124,9 +127,18 @@ namespace Services.Services
                 balance.Quantity += isIncrease ? quantity : -quantity;
 
                 if (balance.Quantity < 0)
+                {
                     throw new InvalidOperationException("Negative balance not allowed");
+                }
 
-                await _balanceRepository.UpdateAsync(balance);
+                if (balance.Quantity == 0)
+                {
+                    await _balanceRepository.DeleteAsync(balance.Id);
+                }
+                else
+                {
+                    await _balanceRepository.UpdateAsync(balance);
+                }
             }
         }
     }

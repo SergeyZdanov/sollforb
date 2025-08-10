@@ -1,11 +1,6 @@
 ﻿using Database.Interfaces;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Database.Repositoryes
 {
@@ -31,6 +26,26 @@ namespace Database.Repositoryes
                 .Include(b => b.Resource)
                 .Include(b => b.Ue)
                 .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Balance>> GetFilteredAsync(IEnumerable<int> resourceIds, IEnumerable<int> ueIds)
+        {
+            var query = Context.Balances
+                .Include(b => b.Resource)
+                .Include(b => b.Ue)
+                .AsQueryable();
+
+            if (resourceIds != null && resourceIds.Any())
+            {
+                query = query.Where(b => resourceIds.Contains(b.ResourceId));
+            }
+
+            if (ueIds != null && ueIds.Any())
+            {
+                query = query.Where(b => ueIds.Contains(b.UE_Id));
+            }
+
+            return await query.ToListAsync();
         }
     }
 }

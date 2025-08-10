@@ -1,5 +1,6 @@
 ﻿using Database.Interfaces;
 using Database.Models;
+using Microsoft.EntityFrameworkCore; // Понадобится для AnyAsync
 
 namespace Database.Repositoryes
 {
@@ -7,6 +8,11 @@ namespace Database.Repositoryes
     {
         public ClientRepository(DatabaseContext databaseContext) : base(databaseContext)
         {
+        }
+
+        public async Task<bool> HasDependenciesAsync(int clientId)
+        {
+            return await Context.ShipmentDocuments.AnyAsync(d => d.ClientId == clientId);
         }
     }
 }

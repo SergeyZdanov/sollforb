@@ -18,7 +18,7 @@ namespace Database.Repositoryes
         public virtual async Task<T> CreateAsync(T entity)
         {
             var result = await EntitySet.AddAsync(entity);
-            Context.SaveChangesAsync();
+            await Context.SaveChangesAsync();
             return result.Entity;
         }
 

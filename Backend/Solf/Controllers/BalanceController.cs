@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using API.DTO.Balance;
+using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
 
 namespace API.Controllers
@@ -15,11 +16,10 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetBalance()
+        public async Task<IActionResult> GetBalance([FromQuery] BalanceFilterDto filter)
         {
-                var balance = await _balanceService.GetCurrentBalanceAsync();
-
-                return Ok(balance);
+            var balance = await _balanceService.GetCurrentBalanceAsync(filter.ResourceIds, filter.UeIds);
+            return Ok(balance);
         }
     }
 }

@@ -15,9 +15,9 @@ namespace Database.Repositoryes
         {
             var query = Context.ReceiptDocuments.AsQueryable();
 
-            if (includeResources) 
+            if (includeResources)
             {
-                query.Include(d => d.ResourceReceipts)
+                query = query.Include(d => d.ResourceReceipts)
                     .ThenInclude(e => e.Resource)
                     .Include(x => x.ResourceReceipts)
                     .ThenInclude(r => r.Ue);
@@ -25,8 +25,6 @@ namespace Database.Repositoryes
 
             return await query.FirstOrDefaultAsync(d => d.Id == id);
         }
-                
-
 
         public async override Task DeleteAsync(int id)
         {
@@ -45,7 +43,7 @@ namespace Database.Repositoryes
         {
             var query = Context.ReceiptDocuments.AsQueryable();
             if (id.HasValue)
-                query.AsQueryable().Where(r => r.Id != id.Value);
+                query = query.Where(r => r.Id != id.Value);
 
             return await query.AnyAsync(r => r.Number == number);
         }
@@ -68,7 +66,6 @@ namespace Database.Repositoryes
                 .Include(d => d.ResourceReceipts)
                 .ThenInclude(r => r.Ue)
                 .AsQueryable();
-
 
             if (startDate.HasValue)
             {

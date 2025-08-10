@@ -1,4 +1,5 @@
 using API.Mappers;
+using AutoMapper;
 using Database;
 using Database.Interfaces;
 using Database.Repositoryes;
@@ -30,7 +31,15 @@ builder.Services.AddScoped<IUeRepository, UeRepository>();
 builder.Services.AddScoped<IUeService, UeService>();
 
 builder.Services.AddScoped<IDocumentReceiptRepository, DocumentReceiptRepository>();
-builder.Services.AddScoped<IDocumentReceiptService, DocumentReceiptService>();
+builder.Services.AddScoped<IDocumentReceiptService, DocumentReceiptService>(provider =>
+    new DocumentReceiptService(
+        provider.GetRequiredService<IDocumentReceiptRepository>(),
+        provider.GetRequiredService<IBalanceService>(),
+        provider.GetRequiredService<IResourceService>(),
+        provider.GetRequiredService<IUeService>(),
+        provider.GetRequiredService<IMapper>()
+    )
+);
 
 builder.Services.AddScoped<IBalanceService, BalanceService>();
 builder.Services.AddScoped<IBalanceRepository, BalanceRepository>();
@@ -62,5 +71,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
+    dbContext.Database.Migrate();
+}
 
 app.Run();

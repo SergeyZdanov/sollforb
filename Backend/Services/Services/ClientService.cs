@@ -36,14 +36,24 @@ namespace Services.Services
 
         public async Task DeleteAsync(int id)
         {
-            await _clientRepository.DeleteAsync(id);
+            if (await _clientRepository.HasDependenciesAsync(id))
+            {
+                await ArchiveClientAsync(id);
+            }
+            else
+            {
+                await _clientRepository.DeleteAsync(id);
+            }
         }
 
         public async Task ArchiveClientAsync(int id)
         {
             var result = await GetByIdAsync(id);
-            result.Status = EntityStatus.Archived;
-            await _clientRepository.UpdateAsync(result);
+            if (result != null)
+            {
+                result.Status = EntityStatus.Archived;
+                await _clientRepository.UpdateAsync(result);
+            }
         }
     }
 }
