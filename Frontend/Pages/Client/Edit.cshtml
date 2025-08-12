@@ -1,0 +1,27 @@
+﻿@page "{id:int}"
+@model Frontend.Pages.Client.EditModel
+@{
+    ViewData["Title"] = "Редактировать клиента";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input type="hidden" asp-for="Client.Id" />
+            <div class="form-group mb-3">
+                <label asp-for="Client.Name" class="control-label">Наименование</label>
+                <input asp-for="Client.Name" class="form-control" />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Client.Address" class="control-label">Адрес</label>
+                <input asp-for="Client.Address" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+                <a asp-page="./Index" class="btn btn-secondary">Отмена</a>
+            </div>
+        </form>
+    </div>
+</div>

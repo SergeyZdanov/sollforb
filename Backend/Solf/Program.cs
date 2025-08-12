@@ -10,13 +10,12 @@ using Services.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 /*var configuration = builder.Configuration;*/
-builder.Services.AddControllers();
+//builder.Services.AddControllers();
 
-/*builder.Services.AddControllers().AddJsonOptions(options
-    =>
+builder.Services.AddControllers().AddJsonOptions(options =>
 {
-    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-});*/
+    options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -61,14 +60,14 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+/*if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
     });
-}
+}*/
 
 app.MapControllers();
 

@@ -1,0 +1,27 @@
+﻿@page "{id:int}"
+@model Frontend.Pages.Ue.DeleteModel
+@{
+    ViewData["Title"] = "Удаление";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Вы уверены, что хотите удалить эту запись?</h3>
+<div>
+    <h4>Единица измерения</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Наименование
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Ue.Name
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Ue.Id" />
+        <input type="submit" value="Удалить" class="btn btn-danger" />
+        <a asp-page="./Index" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>

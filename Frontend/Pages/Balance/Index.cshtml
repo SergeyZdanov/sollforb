@@ -1,0 +1,47 @@
+﻿@page
+@model Frontend.Pages.Balance.IndexModel
+@{
+    ViewData["Title"] = "Баланс";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="get" class="border p-3 rounded mb-3">
+    <div class="row">
+        <div class="col-md-4">
+            <label asp-for="FilterResourceId" class="form-label">Ресурс</label>
+            <select asp-for="FilterResourceId" asp-items="Model.ResourceOptions" class="form-select">
+                <option value="">Выберите ресурс</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="FilterUnitId" class="form-label">Единица измерения</label>
+            <select asp-for="FilterUnitId" asp-items="Model.UeOptions" class="form-select">
+                <option value="">Выберите единицу</option>
+            </select>
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">Применить</button>
+        </div>
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ресурс</th>
+            <th>Единица измерения</th>
+            <th>Количество</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Balances)
+        {
+            <tr>
+                <td>@item.ResourceName</td>
+                <td>@item.UnitName</td>
+                <td>@item.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>

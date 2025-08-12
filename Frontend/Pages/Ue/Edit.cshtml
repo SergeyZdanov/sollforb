@@ -1,0 +1,23 @@
+﻿@page "{id:int}"
+@model Frontend.Pages.Ue.EditModel
+@{
+    ViewData["Title"] = "Редактировать единицу измерения";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input type="hidden" asp-for="Ue.Id" />
+            <div class="form-group mb-3">
+                <label asp-for="Ue.Name" class="control-label">Наименование</label>
+                <input asp-for="Ue.Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+                <a asp-page="./Index" class="btn btn-secondary">Отмена</a>
+            </div>
+        </form>
+    </div>
+</div>
