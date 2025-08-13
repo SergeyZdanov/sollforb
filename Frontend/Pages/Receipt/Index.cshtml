@@ -1,0 +1,86 @@
+﻿@page
+@model Frontend.Pages.Receipt.IndexModel
+@{
+    ViewData["Title"] = "Поступления";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="get" class="border p-3 rounded mb-3">
+    <div class="row g-3 align-items-end">
+        <div class="col-md-3">
+            <label class="form-label">Период (с)</label>
+            <input type="date" asp-for="StartDate" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Период (по)</label>
+            <input type="date" asp-for="EndDate" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label asp-for="FilterResourceId" class="form-label">Ресурс</label>
+            <select asp-for="FilterResourceId" asp-items="Model.ResourceOptions" class="form-select">
+                <option value="">Выберите ресурс</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label asp-for="FilterUnitId" class="form-label">Единица измерения</label>
+            <select asp-for="FilterUnitId" asp-items="Model.UeOptions" class="form-select">
+                <option value="">Выберите единицу</option>
+            </select>
+        </div>
+        <div class="col-md-2 mt-3">
+            <button type="submit" class="btn btn-primary">Применить</button>
+        </div>
+        <div class="col-md-2 mt-3">
+            <a class="btn btn-success" asp-page="./Create">Добавить</a>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Номер</th>
+            <th>Дата</th>
+            <th style="width: 60%;">Содержимое</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doc in Model.Receipts)
+        {
+            <tr>
+                <td>@doc.Number</td>
+                <td>@doc.Date.ToShortDateString()</td>
+                <td>
+                    @if (doc.Resources.Any())
+                    {
+                        <table class="table table-sm table-bordered mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Ресурс</th>
+                                    <th>Ед. изм.</th>
+                                    <th>Количество</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var resource in doc.Resources)
+                                {
+                                    <tr>
+                                        <td>@resource.ResourceName</td>
+                                        <td>@resource.UnitName</td>
+                                        <td>@resource.Quantity</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@doc.Id">Ред.</a>
+                    <a asp-page="./Delete" asp-route-id="@doc.Id" class="text-danger">Удал.</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

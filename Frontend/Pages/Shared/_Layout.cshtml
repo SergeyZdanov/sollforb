@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-f" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Управление складом</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -16,13 +16,13 @@
             <ul class="list-unstyled components">
                 <p>Склад</p>
                 <li>
-                    <a href="#">Баланс</a>
+                    <a asp-page="/Balance/Index">Баланс</a>
                 </li>
                 <li>
-                    <a href="#">Поступления</a>
+                    <a asp-page="/Receipt/Index">Поступления</a>
                 </li>
                 <li>
-                    <a href="#">Отгрузки</a>
+                    <a asp-page="/Shipment/Index">Отгрузки</a>
                 </li>
                 <p>Справочники</p>
                 <li>

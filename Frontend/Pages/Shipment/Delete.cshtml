@@ -1,0 +1,19 @@
+﻿@page "{id:int}"
+@model Frontend.Pages.Shipment.DeleteModel
+@{
+    ViewData["Title"] = "Удаление отгрузки";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Вы уверены, что хотите удалить этот документ?</h3>
+<div>
+    <h4>Отгрузка №@Model.Shipment.Number от @Model.Shipment.Date.ToShortDateString()</h4>
+    <hr />
+
+    <form method="post">
+        <input type="hidden" asp-for="Shipment.Id" />
+        <input type="submit" value="Удалить" class="btn btn-danger" />
+        <a asp-page="./Index" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>

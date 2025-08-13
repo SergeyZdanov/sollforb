@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public int Number { get; set; }
-        public int Date { get; set; }
+        public DateTime Data { get; set; }
         public List<ReceiptResourceResponseDto> Resources { get; set; }
     }
 }

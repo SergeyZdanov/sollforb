@@ -6,6 +6,6 @@
         public DateTime? EndDate { get; set; }
         public List<int> DocumentNumbers { get; set; } = new();
         public List<int> ResourceIds { get; set; } = new();
-        public List<int> Ue { get; set; } = new();
+        public List<int> UeIds { get; set; } = new();
     }
 }

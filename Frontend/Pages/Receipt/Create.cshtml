@@ -1,0 +1,85 @@
+﻿@page
+@model Frontend.Pages.Receipt.CreateModel
+@{
+    ViewData["Title"] = "Новое поступление";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <label asp-for="Receipt.Number" class="form-label">Номер документа</label>
+            <input asp-for="Receipt.Number" class="form-control" type="number" />
+        </div>
+        <div class="col-md-3 mb-3">
+            <label asp-for="Receipt.Date" class="form-label">Дата</label>
+            <input asp-for="Receipt.Date" class="form-control" type="date" />
+        </div>
+    </div>
+
+    <hr />
+    <h4>Ресурсы</h4>
+
+    <div id="resource-rows">
+    </div>
+
+    <button type="button" id="add-resource-btn" class="btn btn-info mt-2">Добавить ресурс</button>
+    <hr />
+
+    <div class="form-group mt-3">
+        <input type="submit" value="Создать документ" class="btn btn-primary" />
+        <a asp-page="./Index" class="btn btn-secondary">Отмена</a>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let resourceIndex = 0;
+            const container = document.getElementById('resource-rows');
+
+            document.getElementById('add-resource-btn').addEventListener('click', function () {
+                const newRow = document.createElement('div');
+                newRow.classList.add('row', 'align-items-end', 'mb-2', 'resource-row');
+                newRow.innerHTML = `
+                    <div class="col-md-4">
+                        <label>Ресурс</label>
+                        <select name="Receipt.Resources[${resourceIndex}].ResourceId" class="form-select">
+                            <option value="">Выберите...</option>
+                            @foreach (var item in Model.ResourceOptions)
+                            {
+                                    <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label>Ед. изм.</label>
+                        <select name="Receipt.Resources[${resourceIndex}].UnitId" class="form-select">
+                            <option value="">Выберите...</option>
+                             @foreach (var item in Model.UeOptions)
+                            {
+                                    <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Количество</label>
+                        <input type="number" name="Receipt.Resources[${resourceIndex}].Quantity" class="form-control" />
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-danger remove-resource-btn">X</button>
+                    </div>
+                `;
+                container.appendChild(newRow);
+                resourceIndex++;
+            });
+
+            container.addEventListener('click', function (e) {
+                if (e.target && e.target.classList.contains('remove-resource-btn')) {
+                    e.target.closest('.resource-row').remove();
+                }
+            });
+        });
+    </script>
+}

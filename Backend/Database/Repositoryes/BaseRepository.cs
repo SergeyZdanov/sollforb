@@ -17,9 +17,21 @@ namespace Database.Repositoryes
 
         public virtual async Task<T> CreateAsync(T entity)
         {
-            var result = await EntitySet.AddAsync(entity);
+            /*var result = await EntitySet.AddAsync(entity);
             await Context.SaveChangesAsync();
-            return result.Entity;
+            return entity;*/
+            try
+            {
+                await EntitySet.AddAsync(entity);
+                await Context.SaveChangesAsync();
+                return entity;
+            }
+            catch (Exception ex)
+            {
+                // Поставьте точку останова на следующей строке
+                Console.WriteLine(ex.ToString());
+                throw; // Перевыбрасываем исключение, чтобы не нарушать логику
+            }
         }
 
         public virtual async Task<T> GetByIdAsync(int id)

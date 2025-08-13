@@ -1,0 +1,112 @@
+﻿@page "{id:int}"
+@model Frontend.Pages.Shipment.EditModel
+@{
+    ViewData["Title"] = "Редактировать отгрузку";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Shipment.Id" />
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <label asp-for="Shipment.Number" class="form-label">Номер документа</label>
+            <input asp-for="Shipment.Number" class="form-control" type="number" />
+        </div>
+        <div class="col-md-3 mb-3">
+            <label asp-for="Shipment.Date" class="form-label">Дата</label>
+            <input asp-for="Shipment.Date" class="form-control" type="date" value="@Model.Shipment.Date.ToString("yyyy-MM-dd")" />
+        </div>
+        <div class="col-md-4 mb-3">
+            <label asp-for="Shipment.ClientId" class="form-label">Клиент</label>
+            <select asp-for="Shipment.ClientId" asp-items="Model.ClientOptions" class="form-select">
+                <option value="">Выберите клиента...</option>
+            </select>
+        </div>
+    </div>
+
+    <hr />
+    <h4>Ресурсы</h4>
+
+    <div id="resource-rows">
+        @for (var i = 0; i < Model.Shipment.Resources.Count; i++)
+        {
+            <div class="row align-items-end mb-2 resource-row">
+                <div class="col-md-4">
+                    <label>Ресурс</label>
+                    <select asp-for="Shipment.Resources[i].ResourceId" asp-items="Model.ResourceOptions" class="form-select"></select>
+                </div>
+                <div class="col-md-3">
+                    <label>Ед. изм.</label>
+                    <select asp-for="Shipment.Resources[i].UnitId" asp-items="Model.UeOptions" class="form-select"></select>
+                </div>
+                <div class="col-md-2">
+                    <label>Количество</label>
+                    <input asp-for="Shipment.Resources[i].Quantity" type="number" class="form-control" />
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-danger remove-resource-btn">X</button>
+                </div>
+            </div>
+        }
+    </div>
+
+    <button type="button" id="add-resource-btn" class="btn btn-info mt-2">Добавить ресурс</button>
+    <hr />
+
+    <div class="form-group mt-3">
+        <input type="submit" value="Сохранить" class="btn btn-primary" />
+        <a asp-page="./Index" class="btn btn-secondary">Отмена</a>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let resourceIndex = @Model.Shipment.Resources.Count;
+            const container = document.getElementById('resource-rows');
+
+            document.getElementById('add-resource-btn').addEventListener('click', function () {
+                const newRow = document.createElement('div');
+                newRow.classList.add('row', 'align-items-end', 'mb-2', 'resource-row');
+                newRow.innerHTML = `
+                    <div class="col-md-4">
+                        <label>Ресурс</label>
+                        <select name="Shipment.Resources[${resourceIndex}].ResourceId" class="form-select">
+                            <option value="">Выберите...</option>
+                            @foreach (var item in Model.ResourceOptions)
+                            {
+                                    <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label>Ед. изм.</label>
+                        <select name="Shipment.Resources[${resourceIndex}].UnitId" class="form-select">
+                            <option value="">Выберите...</option>
+                             @foreach (var item in Model.UeOptions)
+                            {
+                                    <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Количество</label>
+                        <input type="number" name="Shipment.Resources[${resourceIndex}].Quantity" class="form-control" />
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-danger remove-resource-btn">X</button>
+                    </div>
+                `;
+                container.appendChild(newRow);
+                resourceIndex++;
+            });
+
+            container.addEventListener('click', function (e) {
+                if (e.target && e.target.classList.contains('remove-resource-btn')) {
+                    e.target.closest('.resource-row').remove();
+                }
+            });
+        });
+    </script>
+}

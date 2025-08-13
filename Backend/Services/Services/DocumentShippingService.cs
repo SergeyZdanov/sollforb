@@ -70,7 +70,7 @@ namespace Services.Services
                 throw new Exception("Document number is not unique");
 
             existingDocument.Number = documentShipping.Number;
-            existingDocument.Date = documentShipping.Date;
+            existingDocument.Date = documentShipping.Date.ToUniversalTime();
             existingDocument.ClientId = documentShipping.ClientId;
 
             existingDocument.ResourceShipments.Clear();

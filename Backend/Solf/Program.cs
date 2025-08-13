@@ -4,6 +4,7 @@ using Database;
 using Database.Interfaces;
 using Database.Repositoryes;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Services.Interfaces;
 using Services.Services;
 
@@ -46,11 +47,14 @@ builder.Services.AddScoped<IBalanceRepository, BalanceRepository>();
 builder.Services.AddScoped<IDocumentShippingRepository, DocumentShippingRepository>();
 builder.Services.AddScoped<IDocumentShippingService, DocumentShippingService>();
 
-builder.Services.AddAutoMapper(x => x.AddProfile(typeof(ClientMapper)));
+/*builder.Services.AddAutoMapper(x => x.AddProfile(typeof(ClientMapper)));
 builder.Services.AddAutoMapper(x => x.AddProfile(typeof(ResourceMapper)));
 builder.Services.AddAutoMapper(x => x.AddProfile(typeof(UeMapper)));
 builder.Services.AddAutoMapper(x => x.AddProfile(typeof(DocumentReceiptMapper)));
-builder.Services.AddAutoMapper(x => x.AddProfile(typeof(DocumentShippingMapper)));
+builder.Services.AddAutoMapper(x => x.AddProfile(typeof(DocumentShippingMapper)));*/
+
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddDbContext<DatabaseContext>(options =>
 {

@@ -56,7 +56,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetFilteredDocuments([FromQuery] DocumentReceiptFilterDto filter)
         {
-            var documents = await _documentReceiptService.GetFilteredAsync(filter.StartDate, filter.EndDate, filter.DocumentNumbers, filter.ResourceIds, filter.Ue);
+            var documents = await _documentReceiptService.GetFilteredAsync(filter.StartDate, filter.EndDate, filter.DocumentNumbers, filter.ResourceIds, filter.UeIds);
             var resultDto = _mapper.Map<IEnumerable<DocumentReceiptDto>>(documents);
             return Ok(resultDto);
         }
