@@ -1,7 +1,6 @@
 ﻿using Database.Interfaces;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace Database.Repositoryes
 {
@@ -69,11 +68,13 @@ namespace Database.Repositoryes
 
             if (startDate.HasValue)
             {
-                query = query.Where(d => d.Date >= startDate.Value);
+                var utcStartDate = startDate.Value.ToUniversalTime();
+                query = query.Where(d => d.Date >= utcStartDate);
             }
             if (endDate.HasValue)
             {
-                query = query.Where(d => d.Date <= endDate.Value);
+                var utcEndDate = endDate.Value.ToUniversalTime();
+                query = query.Where(d => d.Date <= utcEndDate);
             }
 
             if (documentNumbers != null && documentNumbers.Any())
@@ -92,8 +93,16 @@ namespace Database.Repositoryes
                 query = query.Where(d => d.ResourceReceipts
                     .Any(r => UeIds.Contains(r.UE_Id)));
             }
+            try
+            {
 
-            return await query.ToListAsync();
+                return await query.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw new Exception();
+            }
         }
     }
 }

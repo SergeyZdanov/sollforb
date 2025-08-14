@@ -49,7 +49,7 @@ namespace Frontend.Pages.Receipt
             if (StartDate.HasValue) query["startDate"] = StartDate.Value.ToString("o");
             if (EndDate.HasValue) query["endDate"] = EndDate.Value.ToString("o");
             if (FilterResourceId.HasValue) query["resourceIds"] = FilterResourceId.Value.ToString();
-            if (FilterUnitId.HasValue) query["ue"] = FilterUnitId.Value.ToString();
+            if (FilterUnitId.HasValue) query["ueIds"] = FilterUnitId.Value.ToString();
 
             builder.Query = query.ToString();
 

@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Database.Enums;
 using Database.Interfaces;
 using Database.Models;
 using Services.Interfaces;
@@ -101,7 +100,8 @@ namespace Services.Services
 
         public async Task<IEnumerable<DocumentReceipt>> GetFilteredAsync(DateTime? startDate, DateTime? endDate, IEnumerable<int>? documentNumbers, IEnumerable<int>? resourceIds, IEnumerable<int>? UeIds)
         {
-            return await _documentReceiptRepository.GetFilteredAsync(startDate, endDate, documentNumbers, resourceIds, UeIds);
+            var s = await _documentReceiptRepository.GetFilteredAsync(startDate, endDate, documentNumbers, resourceIds, UeIds);
+            return s;
         }
     }
 }

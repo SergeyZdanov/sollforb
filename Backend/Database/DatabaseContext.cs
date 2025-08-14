@@ -55,7 +55,8 @@ namespace Database
 
             modelBuilder.Entity<Balance>()
                 .HasOne(b => b.Resource)
-                .WithMany()
+                .WithMany(r => r.Balances)
+                .HasForeignKey(b => b.ResourceId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Balance>()

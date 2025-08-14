@@ -1,10 +1,8 @@
-using API.Mappers;
 using AutoMapper;
 using Database;
 using Database.Interfaces;
 using Database.Repositoryes;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Services.Interfaces;
 using Services.Services;
 
@@ -58,7 +56,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddDbContext<DatabaseContext>(options =>
 {
-    /* options.UseNpgsql("Host=localhost;Port=5432;Database=Solf;Username=postgres;Password=111;");*/
+    /*options.UseNpgsql("Host=localhost;Port=5432;Database=Solf;Username=postgres;Password=111;");*/
     options.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword;");
 });
 

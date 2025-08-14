@@ -67,11 +67,13 @@ namespace Database.Repositoryes
 
             if (startDate.HasValue)
             {
-                query = query.Where(d => d.Date >= startDate.Value);
+                var utcStartDate = startDate.Value.ToUniversalTime();
+                query = query.Where(d => d.Date >= utcStartDate);
             }
             if (endDate.HasValue)
             {
-                query = query.Where(d => d.Date <= endDate.Value);
+                var utcEndDate = endDate.Value.ToUniversalTime();
+                query = query.Where(d => d.Date <= utcEndDate);
             }
 
             if (documentNumbers != null && documentNumbers.Any())

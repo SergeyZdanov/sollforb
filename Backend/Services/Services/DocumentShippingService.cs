@@ -53,7 +53,7 @@ namespace Services.Services
                 if (ue == null)
                     throw new Exception("Unit of measurement is not available or is in archive");
             }
-
+            documentShipping.Date = documentShipping.Date.ToUniversalTime();
             return await _documentShippingRepository.CreateAsync(documentShipping);
         }
 
